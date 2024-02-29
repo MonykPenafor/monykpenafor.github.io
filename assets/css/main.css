@@ -1,3 +1,8 @@
+.container{
+    padding: 20px;
+    text-align: center;
+}
+
 nav {
     background-color: #333; /* Cor de fundo da barra de menu */
 }
@@ -34,4 +39,39 @@ div.animation {
 }
 div.componente{
     margin: 5px;
+}
+
+
+abbr {
+    text-decoration: none; /* Remove underlines */
+  }
+
+ul li{
+    display: inline;
+    padding: 5px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.fa-hover-elevate:hover {
+transform: translateY(-5px);
+transition: transform 0.7s ease;
+}
+
+.project img{
+    width: 70%;
+}
+
+.row{
+    width:100%;
+    overflow:auto;
+}
+
+.project{
+    width:33%;
+    float:left;
 }
