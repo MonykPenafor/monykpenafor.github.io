@@ -1,49 +1,31 @@
-.menu {
+nav {
     background-color: #333; /* Cor de fundo da barra de menu */
 }
 
-.menu ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.menu ul li {
+nav ul li {
     display: inline;
     font-size: 100%;
 }
 
-.menu ul li a {
+nav ul li a {
     display: inline-block;
     padding: 10px 20px; /* Espaçamento interno do link */
     color: #fff; /* Cor do texto */
     text-decoration: none;
 }
 
-.menu ul li a:hover {
+nav ul li a:hover {
     background-color: #555; /* Cor de fundo ao passar o mouse */
 }
 body {
     margin: 0;
     padding: 0;
-}
-
-h1{
-    text-align: center;
-}
-
-div.nome{
-    width: 100%;
-    text-align: center;
-  }
-
-div.nome div{
-    width: 4%;
-    display: inline-block;
-  }
-
-div.test{
-    padding: 80px;
 }
 
 div.animation {
@@ -53,5 +35,3 @@ div.animation {
 div.componente{
     margin: 5px;
 }
-
-
