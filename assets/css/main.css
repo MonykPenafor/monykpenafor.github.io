@@ -1,4 +1,4 @@
-/*BODY, SECTIONS, CONTAINERS, **/
+/*--------------------GENERAL COMPONENTS--------------------*/
 
 body {
     margin: 0;
@@ -7,84 +7,57 @@ body {
 
 .container{
     text-align: center;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     margin-top: 50px;
 }
 
 h2{
-    color: #80cfb8;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #80cfb8 !important;
 }
 
 
-/* NAV BAR */
-nav {
-    background-color: #333; /* Cor de fundo da barra de menu */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+/* --------------------NAV BAR-------------------- */
+nav a {
+    padding: 10px 20px; 
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+#navbar {
+    justify-content: flex-start; /* Align items to the end (right) */
 }
-
-nav ul li {
-    display: inline;
-    font-size: 100%;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 10px 20px; /* Espaçamento interno do link */
-    color: #fff; /* Cor do texto */
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #555; /* Cor de fundo ao passar o mouse */
-}
-
-
 
 /* ----------------------------------- PROFILE SECTION ----------------------------------------*/
 
-/* ANIMATION */
+/*-------------------- ANIMATION --------------------*/
 div.animation {
     display: inline-flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
 div.componente{
     margin: 5px;
 }
 
 
-/* ABOUT */
+/* --------------------ABOUT-------------------- */
         
 abbr {
-    text-decoration: none; /* Remove underlines */
+    text-decoration: none !important; /* Remove underlines */
   }
 
-/* SOCIAL MEDIA ICONS */
-ul{
-    padding: 0;
-    margin: 0;
-}
+
+/* --------------------SOCIAL MEDIA ICONS-------------------- */
+
 ul li{
     display: inline;
 }
 
 a{
-    text-decoration: none;
-    color: black;
+    text-decoration: none !important;
 }
 
 .fa-hover-elevate:hover {
@@ -94,53 +67,57 @@ transition: transform 0.7s ease;
 
 
  /*-------------------------------- PROJECTS SECTION ----------------------------------*/
-#projects .container{
+#projects .container, #projects{
     background-color: #232830;
 }
 
-#projects{
-    background-color: #232830;
+ /*-------------------------------- EDUCATION SECTION ----------------------------------*/
+
+#education{
+    background-color: #1b3052;
 }
 
-#projects p{
-    text-align: justify;
-    margin-top: 10;
-    margin-bottom: 0;
-}
-
-#projects .row {
-    display: ruby;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.project {
-    width: 32%;
-    margin-bottom: 17px;
-    /* border: 2px solid #000000;  */
+.card-container{
+    width: 30%;
     box-sizing: border-box;
-    border-radius: 25px;
-    padding: 20px;
-    background-color: beige;
+    margin: 10px;
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 25px;
+.card-deck{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-@media (max-width: 768px) {
-    .project {
+@media (max-width: 800px) {
+    .card-container{
         width: calc(50% - 20px); /* Adjust width for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .project {
+    .card-container{
         width: 100%; /* Full width for smallest screens */
     }
 }
+
+
+
+
+
+ /*-------------------------------- WORK SECTION ----------------------------------*/
+
+ div.card-mb-7{
+    max-width: 1000px;
+    margin: 10px;
+ }
+
+
+
+
+
+
+
 
 
 /* FOOTER */
@@ -152,3 +129,22 @@ footer{
     display: flex;
     align-items: center;
 }
+
+
+
+
+
+
+/* Define variables */
+:root {
+    --primary-color: #80cfb8;
+    --secondary-color: #232830;
+    --highlight-color: #555;
+    --background-color: beige;
+  }
+  
+  /* Use variables */
+  h2 {
+    color: var(--primary-color);
+  }
+  
