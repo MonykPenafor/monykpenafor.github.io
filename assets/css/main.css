@@ -14,6 +14,7 @@ body {
 
 h2{
     color: #80cfb8 !important;
+    padding-top: 70px !important;
 }
 
 
@@ -34,7 +35,7 @@ div.animation {
     flex-wrap: wrap;
     align-items: center;
     margin-top: 30px;
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 100px;
 }
 
@@ -54,15 +55,18 @@ abbr {
 
 ul li{
     display: inline;
+    padding: 5px;
 }
 
-a{
+.socialmedia a{
     text-decoration: none !important;
+    color: rgb(180, 174, 170);
 }
 
 .fa-hover-elevate:hover {
 transform: translateY(-5px);
 transition: transform 0.7s ease;
+color: #ffffff;
 }
 
 
@@ -110,13 +114,9 @@ transition: transform 0.7s ease;
  div.card-mb-7{
     max-width: 1000px;
     margin: 10px;
- }
-
-
-
-
-
-
+    text-align: justify; 
+    display: -webkit-inline-box !important;
+}
 
 
 
