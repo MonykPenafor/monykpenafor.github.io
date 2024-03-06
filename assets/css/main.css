@@ -13,8 +13,9 @@ body {
 }
 
 #projects h2, #education h2, #work-history h2{
-    color: #80cfb8;
-    padding-top: 70px;
+    color: #272727;
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 
 /* section a {
@@ -43,17 +44,29 @@ li{
     padding: 5px;
 }
 
-.socialmedia a{
+footer .socialmedia a{
     text-decoration: none;
     color: rgb(180, 174, 170);
 }
 
-.fa-hover-elevate:hover {
+footer .fa-hover-elevate:hover {
 transform: translateY(-5px);
 transition: transform 0.7s ease;
 color: #ffffff;
 }
 
+
+#profile .socialmedia a{
+    text-decoration: none;
+    color: #212529;
+}
+
+#profile .fa-hover-elevate:hover {
+    transform: translateY(-5px);
+    transition: transform 0.7s ease;
+    color: #3c4945;
+    }
+    
 
 /* CARDS-DECKS (present in projects and work history) */
 
@@ -69,6 +82,7 @@ color: #ffffff;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 
 @media (max-width: 800px) {
     .card-container{
@@ -110,15 +124,15 @@ abbr {
 
 
  /*--------- PROJECTS SECTION ------------*/
-#projects .container, #projects{
+/* #projects .container, #projects{
     background-color: #232830;
-}
+} */
 
  /*--------- EDUCATION SECTION -------------*/
 
-#education{
+/* #education{
     background-color: #1b3052;
-}
+} */
 
  /*---------- WORK SECTION ---------------*/
 
