@@ -1,65 +1,50 @@
-/*--------------------GENERAL COMPONENTS--------------------*/
+/*---------------------------------GENERAL COMPONENTS---------------------------------*/
 
 body {
     margin: 0;
     padding: 0;
 }
-
 .container{
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 
-h2{
-    color: #80cfb8 !important;
-    padding-top: 70px !important;
+#projects h2, #education h2, #work-history h2{
+    color: #80cfb8;
+    padding-top: 70px;
 }
 
+/* section a {
+    text-decoration: none;
+    color: black;
+} */
 
-/* --------------------NAV BAR-------------------- */
+/* NAV BAR */
 nav a {
     padding: 10px 20px; 
 }
-
 #navbar {
     justify-content: flex-start; /* Align items to the end (right) */
 }
 
-/* ----------------------------------- PROFILE SECTION ----------------------------------------*/
 
-/*-------------------- ANIMATION --------------------*/
-div.animation {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 30px;
-    padding-top: 150px;
-    padding-bottom: 100px;
+/* SOCIAL MEDIA ICONS (present in profile and footer) */
+
+.socialmedia ul{
+    padding: 0;
+    margin-bottom:0;
 }
 
-div.componente{
-    margin: 5px;
-}
-
-
-/* --------------------ABOUT-------------------- */
-        
-abbr {
-    text-decoration: none !important; /* Remove underlines */
-  }
-
-
-/* --------------------SOCIAL MEDIA ICONS-------------------- */
-
-ul li{
+li{
     display: inline;
     padding: 5px;
 }
 
 .socialmedia a{
-    text-decoration: none !important;
+    text-decoration: none;
     color: rgb(180, 174, 170);
 }
 
@@ -70,21 +55,13 @@ color: #ffffff;
 }
 
 
- /*-------------------------------- PROJECTS SECTION ----------------------------------*/
-#projects .container, #projects{
-    background-color: #232830;
-}
-
- /*-------------------------------- EDUCATION SECTION ----------------------------------*/
-
-#education{
-    background-color: #1b3052;
-}
+/* CARDS-DECKS (present in projects and work history) */
 
 .card-container{
     width: 30%;
     box-sizing: border-box;
     margin: 10px;
+    text-align: justify;
 }
 
 .card-deck{
@@ -106,45 +83,61 @@ color: #ffffff;
 }
 
 
+/* ----------------------------------- SECTIONS ----------------------------------------*/
 
+/* -------------- PROFILE SECTION ------------*/
 
+/* ANIMATION */
+div.animation {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
 
- /*-------------------------------- WORK SECTION ----------------------------------*/
-
- div.card-mb-7{
-    max-width: 1000px;
-    margin: 10px;
-    text-align: justify; 
-    display: -webkit-inline-box !important;
+div.componente{
+    margin: 5px;
 }
 
 
+/* ABOUT */
+abbr {
+    text-decoration: none !important; /* Remove underlines */
+  }
+
+
+
+ /*--------- PROJECTS SECTION ------------*/
+#projects .container, #projects{
+    background-color: #232830;
+}
+
+ /*--------- EDUCATION SECTION -------------*/
+
+#education{
+    background-color: #1b3052;
+}
+
+ /*---------- WORK SECTION ---------------*/
+
+/* CARD */
+ .card-mb-7{
+    max-width: 1000px;
+    margin: 10px;
+    text-align: justify; 
+    display: -webkit-inline-box;
+}
+
 
 /* FOOTER */
-/* social media icons is in profile section */
-
 footer{
     background-color: #232830;
-    padding: 10px;
     display: flex;
     align-items: center;
 }
 
-
-
-
-
-
-/* Define variables */
-:root {
-    --primary-color: #80cfb8;
-    --secondary-color: #232830;
-    --highlight-color: #555;
-    --background-color: beige;
-  }
-  
-  /* Use variables */
-  h2 {
-    color: var(--primary-color);
-  }
-  
+footer .container{
+    padding-bottom: 30px;
+}
