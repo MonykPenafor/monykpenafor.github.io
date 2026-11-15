@@ -1,197 +1,799 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="images\favicons\student.ico" type="image/x-icon">
-    <title>Monyk Paola Portfolio</title>
+    <title>Monyk Paola Penafor | Full-Stack Developer</title>
+    <meta name="description" content="Monyk Paola Penafor, Full-Stack Developer working with C#/.NET, Angular, SQL Server and Azure DevOps. Experience, projects and certifications.">
+    <meta name="author" content="Monyk Paola Penafor">
 
-    <!-- CSS AND BOOTSTRAP -->
-    <link rel="stylesheet" href="assets\css\main.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
- 
+    <!-- Open Graph (link preview on LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:title" content="Monyk Paola Penafor | Full-Stack Developer">
+    <meta property="og:description" content="Full-Stack Developer · C# · .NET · Angular · SQL Server. Experience, projects and certifications.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://monykpenafor.github.io/">
 
-    <!-- FONT AWESOME LIB -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/favicons/dragon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Permanent+Marker&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Apply the saved theme before the page renders (avoids a flash) -->
+    <script>
+        try {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.dataset.theme = saved;
+        } catch (e) {}
+    </script>
 </head>
 
-
-
 <body>
-    <header>
-        <nav id="navbar" class="navbar fixed-top navbar-light bg-light">
-            <a class="navbar-brand" href="#profile">Profile</a>
-            <a class="navbar-brand" href="#projects">Projects</a>
-            <a class="navbar-brand" href="#work-history">Work History</a>
-            <a class="navbar-brand" href="#education">Education</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============================ HEADER / NAV ============================ -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main">
+            <a class="nav-logo" href="#home" aria-label="Back to top">
+                <img src="images/favicons/dragon.ico" alt="" width="28" height="28">
+                <span>monyk<span class="accent">.dev</span></span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" aria-label="Toggle light/dark theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
         </nav>
+        <div class="road-progress" aria-hidden="true"><span></span></div>
     </header>
 
+    <main id="main">
 
-    <section id="profile">
-        <div class="container">
-            <div class="animation">
-                <div class="componente"><img src="images\favicons\dragon.ico" width="auto" height="25px"></div>
-                <div class="componente">M</div>
-                <div class="componente">O</div>
-                <div class="componente">N</div>
-                <div class="componente">Y</div>
-                <div class="componente">K</div>
-                <div class="componente"></div>
-                <div class="componente"></div>
-                <div class="componente">P</div>
-                <div class="componente">A</div>
-                <div class="componente">O</div>
-                <div class="componente">L</div>
-                <div class="componente">A</div>
-                <div class="componente"></div>
-                <div class="componente"></div>
-                <div class="componente">P</div>
-                <div class="componente">E</div>
-                <div class="componente">N</div>
-                <div class="componente">A</div>
-                <div class="componente">F</div>
-                <div class="componente">O</div>
-                <div class="componente">R</div>
-                <div class="componente"><img src="images\favicons\dragon.ico" width="auto" height="25px"></div>
+        <!-- ================================ HERO ================================ -->
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <p class="hero-status">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        <span>Currently building ERP software at <strong>Movere Software</strong></span>
+                    </p>
+                    <h1 class="hero-name">Monyk Paola Penafor</h1>
+                    <p class="hero-role"><span class="accent">Full-Stack Developer</span> · C# · .NET · Angular · SQL&nbsp;Server</p>
+                    <p class="hero-text">
+                        I build and maintain web systems and APIs for a large-scale automotive ERP used by
+                        more than 1,000 companies, from integrations and business rules to reports and databases.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#experience">See my experience</a>
+                        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+                    </div>
+
+                    <ul class="social">
+                        <li><a href="https://github.com/MonykPenafor" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/monykpenafor/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+
+                <!--
+                    Hand-drawn illustration (inline SVG), inspired by a NYC street-corner drawing.
+                    Generated once; to change a sign's text, edit the <text> elements below.
+                -->
+                <figure class="art-print">
+                    <svg class="art-svg" viewBox="0 0 440 620" role="img" aria-labelledby="art-title">
+                      <title id="art-title">Hand-drawn street corner signpost. The signs read C#, .NET, Angular, SQL Server, SOLID, Azure and REST API, and speech bubbles say Hello, Olá and Hola.</title>
+                      <defs>
+                        <filter id="sp-paint" x="-5%" y="-5%" width="110%" height="110%">
+                          <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7" result="grain"/>
+                          <feColorMatrix in="grain" type="saturate" values="0" result="grainMono"/>
+                          <feComponentTransfer in="grainMono" result="grainSoft">
+                            <feFuncR type="linear" slope=".38" intercept=".74"/>
+                            <feFuncG type="linear" slope=".38" intercept=".74"/>
+                            <feFuncB type="linear" slope=".38" intercept=".74"/>
+                            <feFuncA type="linear" slope="0" intercept="1"/>
+                          </feComponentTransfer>
+                          <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="3" result="wash"/>
+                          <feColorMatrix in="wash" type="saturate" values="0" result="washMono"/>
+                          <feComponentTransfer in="washMono" result="washSoft">
+                            <feFuncR type="linear" slope=".3" intercept=".82"/>
+                            <feFuncG type="linear" slope=".3" intercept=".82"/>
+                            <feFuncB type="linear" slope=".3" intercept=".82"/>
+                            <feFuncA type="linear" slope="0" intercept="1"/>
+                          </feComponentTransfer>
+                          <feBlend in="SourceGraphic" in2="grainSoft" mode="multiply" result="t1"/>
+                          <feBlend in="t1" in2="washSoft" mode="multiply" result="t2"/>
+                          <feComposite in="t2" in2="SourceGraphic" operator="in" result="t3"/>
+                          <feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="2" seed="11" result="warp"/>
+                          <feDisplacementMap in="t3" in2="warp" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+                        </filter>
+                        <filter id="sp-ink" x="-5%" y="-5%" width="110%" height="110%">
+                          <feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="5" result="warp"/>
+                          <feDisplacementMap in="SourceGraphic" in2="warp" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+                        </filter>
+                        <filter id="sp-paper">
+                          <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="2" result="n"/>
+                          <feColorMatrix in="n" type="saturate" values="0" result="m"/>
+                          <feComponentTransfer in="m" result="s">
+                            <feFuncR type="linear" slope=".12" intercept=".92"/>
+                            <feFuncG type="linear" slope=".12" intercept=".92"/>
+                            <feFuncB type="linear" slope=".12" intercept=".92"/>
+                            <feFuncA type="linear" slope="0" intercept="1"/>
+                          </feComponentTransfer>
+                          <feBlend in="SourceGraphic" in2="s" mode="multiply"/>
+                        </filter>
+                      </defs>
+                      <rect width="440" height="620" fill="#F3EDDD" filter="url(#sp-paper)"/>
+                      <ellipse cx="220" cy="602" rx="120" ry="9" fill="#000" opacity=".12"/>
+                      <g filter="url(#sp-paint)" transform="translate(3 3)">
+                          <path d="M30 96 C 20 60, 70 42, 112 50 C 150 58, 152 96, 120 108 C 100 116, 76 114, 62 110 L 40 126 L 48 104 C 38 102, 32 100, 30 96 Z" fill="#C8322B"/>
+                          <path d="M352 30 C 388 22, 412 52, 404 86 C 398 110, 372 118, 356 104 L 344 118 L 346 98 C 330 84, 330 40, 352 30 Z" fill="#2747A8"/>
+                          <path d="M312 140 C 330 120, 412 122, 420 146 C 426 166, 392 176, 362 172 L 350 186 L 348 170 C 318 166, 302 156, 312 140 Z" fill="#F2C230"/>
+                          <rect x="211" y="120" width="18" height="470" rx="2" fill="#4A4E55"/>
+                          <rect x="214" y="120" width="4" height="470" rx="1" fill="#6E737B"/>
+                          <rect x="194" y="586" width="52" height="16" rx="3" fill="#2F3237"/>
+                          <polygon points="228,112 276,104 290,112 242,120" fill="#D49A16"/>
+                          <rect x="228" y="120" width="48" height="112" rx="3" fill="#F2C230"/>
+                          <polygon points="276,120 290,112 290,222 276,232" fill="#D49A16"/>
+                          <rect x="236" y="140" width="34" height="22" rx="2" transform="rotate(-10 253 151)" fill="#FBF8EF"/>
+                          <rect x="176" y="252" width="36" height="9" rx="2" fill="#2F3237"/>
+                          <rect x="186" y="240" width="10" height="34" rx="2" fill="#2F3237"/>
+                          <polygon points="64,214 80,204 80,300 64,310" fill="#D49A16"/>
+                          <rect x="80" y="204" width="100" height="96" rx="6" fill="#F2C230"/>
+                          <rect x="92" y="216" width="76" height="72" rx="4" fill="#222"/>
+                          <rect x="236" y="196" width="104" height="92" rx="4" transform="rotate(-9 288 242)" fill="#FBF8EF"/>
+                          <rect x="140" y="302" width="170" height="36" rx="4" transform="rotate(24 225 320)" fill="#2E7D4F"/>
+                          <rect x="62" y="366" width="152" height="40" rx="4" transform="rotate(-4 138 386)" fill="#2E7D4F"/>
+                          <rect x="226" y="352" width="142" height="36" rx="4" transform="rotate(-5 297 370)" fill="#C8322B"/>
+                          <rect x="80" y="432" width="160" height="44" rx="3" transform="rotate(-7 159 454)" fill="#1c1c1c"/>
+                          <polygon points="90,445 200,445 200,438 230,454 200,470 200,463 90,463" transform="rotate(-7 159 454)" fill="#FBF8EF"/>
+                          <rect x="229" y="448" width="40" height="7" rx="2" fill="#2F3237"/>
+                          <polygon points="306,402 340,402 364,426 364,460 340,484 306,484 282,460 282,426" transform="rotate(6 323 443)" fill="#C8322B"/>
+                          <rect x="282" y="494" width="86" height="20" rx="2" transform="rotate(3 325 504)" fill="#C8322B"/>
+                          <rect x="128" y="520" width="184" height="9" rx="2" fill="#2F3237"/>
+                          <polygon points="100,532 112,524 112,592 100,600" fill="#D49A16"/>
+                          <rect x="112" y="524" width="70" height="68" rx="4" fill="#F2C230"/>
+                          <rect x="120" y="548" width="54" height="18" rx="2" transform="rotate(-6 147 557)" fill="#FBF8EF"/>
+                          <rect x="258" y="524" width="70" height="68" rx="4" fill="#E8842C"/>
+                          <polygon points="328,524 340,532 340,600 328,592" fill="#B9621B"/>
+                          <rect x="264" y="548" width="58" height="18" rx="2" transform="rotate(5 293 557)" fill="#FBF8EF"/>
+                      </g>
+                      <g filter="url(#sp-ink)" stroke="#1c1c1c" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+                          <path d="M30 96 C 20 60, 70 42, 112 50 C 150 58, 152 96, 120 108 C 100 116, 76 114, 62 110 L 40 126 L 48 104 C 38 102, 32 100, 30 96 Z" fill="none"/>
+                          <path d="M352 30 C 388 22, 412 52, 404 86 C 398 110, 372 118, 356 104 L 344 118 L 346 98 C 330 84, 330 40, 352 30 Z" fill="none"/>
+                          <path d="M312 140 C 330 120, 412 122, 420 146 C 426 166, 392 176, 362 172 L 350 186 L 348 170 C 318 166, 302 156, 312 140 Z" fill="none"/>
+                          <rect x="211" y="120" width="18" height="470" rx="2" fill="none"/>
+                          <rect x="194" y="586" width="52" height="16" rx="3" fill="none"/>
+                          <polygon points="228,112 276,104 290,112 242,120" fill="none"/>
+                          <rect x="228" y="120" width="48" height="112" rx="3" fill="none"/>
+                          <polygon points="276,120 290,112 290,222 276,232" fill="none"/>
+                          <rect x="236" y="140" width="34" height="22" rx="2" transform="rotate(-10 253 151)" fill="none"/>
+                          <rect x="176" y="252" width="36" height="9" rx="2" fill="none"/>
+                          <rect x="186" y="240" width="10" height="34" rx="2" fill="none"/>
+                          <polygon points="64,214 80,204 80,300 64,310" fill="none"/>
+                          <rect x="80" y="204" width="100" height="96" rx="6" fill="none"/>
+                          <rect x="92" y="216" width="76" height="72" rx="4" fill="none"/>
+                          <rect x="236" y="196" width="104" height="92" rx="4" transform="rotate(-9 288 242)" fill="none"/>
+                          <rect x="140" y="302" width="170" height="36" rx="4" transform="rotate(24 225 320)" fill="none"/>
+                          <rect x="145" y="307" width="160" height="26" rx="3" transform="rotate(24 225 320)" fill="none"/>
+                          <rect x="62" y="366" width="152" height="40" rx="4" transform="rotate(-4 138 386)" fill="none"/>
+                          <rect x="67" y="371" width="142" height="30" rx="3" transform="rotate(-4 138 386)" fill="none"/>
+                          <rect x="226" y="352" width="142" height="36" rx="4" transform="rotate(-5 297 370)" fill="none"/>
+                          <rect x="231" y="357" width="132" height="26" rx="3" transform="rotate(-5 297 370)" fill="none"/>
+                          <rect x="80" y="432" width="160" height="44" rx="3" transform="rotate(-7 159 454)" fill="none"/>
+                          <rect x="229" y="448" width="40" height="7" rx="2" fill="none"/>
+                          <polygon points="306,402 340,402 364,426 364,460 340,484 306,484 282,460 282,426" transform="rotate(6 323 443)" fill="none"/>
+                          <polygon points="309,408 337,408 358,429 358,457 337,478 309,478 288,457 288,429" transform="rotate(6 323 443)" fill="none"/>
+                          <rect x="282" y="494" width="86" height="20" rx="2" transform="rotate(3 325 504)" fill="none"/>
+                          <rect x="128" y="520" width="184" height="9" rx="2" fill="none"/>
+                          <polygon points="100,532 112,524 112,592 100,600" fill="none"/>
+                          <rect x="112" y="524" width="70" height="68" rx="4" fill="none"/>
+                          <rect x="120" y="548" width="54" height="18" rx="2" transform="rotate(-6 147 557)" fill="none"/>
+                          <rect x="258" y="524" width="70" height="68" rx="4" fill="none"/>
+                          <polygon points="328,524 340,532 340,600 328,592" fill="none"/>
+                          <rect x="264" y="548" width="58" height="18" rx="2" transform="rotate(5 293 557)" fill="none"/>
+                      </g>
+                      <g class="art-text" filter="url(#sp-ink)">
+                          <text x="90" y="92" font-size="24" fill="#FBF8EF" text-anchor="middle" letter-spacing="0" transform="rotate(-8 90 86)">Hello!</text>
+                          <text x="371" y="80" font-size="22" fill="#FBF8EF" text-anchor="middle" letter-spacing="0" transform="rotate(6 371 74)">Olá!</text>
+                          <text x="364" y="156" font-size="17" fill="#1c1c1c" text-anchor="middle" letter-spacing="0" transform="rotate(-4 364 150)">¡Hola!</text>
+                          <text x="253" y="156" font-size="10" fill="#C8322B" text-anchor="middle" letter-spacing="0" transform="rotate(-10 253 151)">I ♥ C#</text>
+                          <text x="130" y="262" font-size="30" fill="#FF8A3D" text-anchor="middle" letter-spacing="0">&lt;/&gt;</text>
+                          <text x="288" y="222" font-size="15" fill="#1c1c1c" text-anchor="middle" letter-spacing="0" transform="rotate(-9 288 242)">DO NOT</text>
+                          <text x="288" y="242" font-size="15" fill="#1c1c1c" text-anchor="middle" letter-spacing="0" transform="rotate(-9 288 242)">DEPLOY ON</text>
+                          <text x="288" y="262" font-size="15" fill="#1c1c1c" text-anchor="middle" letter-spacing="0" transform="rotate(-9 288 242)">FRIDAYS</text>
+                          <text x="288" y="278" font-size="10" fill="#C8322B" text-anchor="middle" letter-spacing="0" transform="rotate(-9 288 242)">in prod</text>
+                          <text x="225" y="330" font-size="20" fill="#FBF8EF" text-anchor="middle" letter-spacing="1.5" transform="rotate(24 225 320)">C# ST</text>
+                          <text x="138" y="394" font-size="21" fill="#FBF8EF" text-anchor="middle" letter-spacing="1" transform="rotate(-4 138 386)">.NET AVE</text>
+                          <text x="297" y="378" font-size="19" fill="#FBF8EF" text-anchor="middle" letter-spacing="1.5" transform="rotate(-5 297 370)">ANGULAR</text>
+                          <text x="150" y="459" font-size="13" fill="#1c1c1c" text-anchor="middle" letter-spacing="0.5" transform="rotate(-7 159 454)">SQL SERVER</text>
+                          <text x="323" y="452" font-size="21" fill="#FBF8EF" text-anchor="middle" letter-spacing="0" transform="rotate(6 323 443)">SOLID</text>
+                          <text x="325" y="509" font-size="10" fill="#FBF8EF" text-anchor="middle" letter-spacing="0.5" transform="rotate(3 325 504)">CLEAN ARCH</text>
+                          <text x="147" y="561" font-size="11" fill="#2747A8" text-anchor="middle" letter-spacing="0" transform="rotate(-6 147 557)">AZURE</text>
+                          <text x="293" y="561" font-size="10" fill="#1c1c1c" text-anchor="middle" letter-spacing="0" transform="rotate(5 293 557)">REST API</text>
+                      </g>
+                    </svg>
+                </figure>
             </div>
-        </div>
 
-        <div class="container">
-            <div class="about">
-                <p>I'm a tech student <abbr title="Internet Systems Technology - Tecnologia em Sistemas para Internet">(TSI)</abbr> at <abbr title="Intituto Federal do Mato Grosso">IFMT</abbr> in Brazil aiming to become a Full-Stack  Developer. I want to experience working in an international tech company and being a project leader in the future. Python is the programming language I've worked with the most, but now I'm studying JavaScript and web development. Check my GitHub to see more technologies I've also used!</p>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="socialmedia">
-                <ul>
+            <!-- Key numbers -->
+            <div class="container">
+                <ul class="stats">
                     <li>
-                        <a href="https://www.linkedin.com/in/monykpenafor/" target="_blank">
-                            <i class="fab fa-linkedin fa-2x fa-hover-elevate" ></i></a></li>            
+                        <strong data-years-since="2024-04">2+</strong>
+                        <span>years as a developer</span>
+                    </li>
                     <li>
-                        <a href="https://github.com/MonykPenafor" target="_blank">
-                            <i class="fab fa-github fa-2x fa-hover-elevate"></i></a></li>
+                        <strong>1,000+</strong>
+                        <span>companies using the ERP I work on</span>
+                    </li>
                     <li>
-                        <a href="assets/monykpenafor_EN.pdf" target="_blank" download="MonykPenafor_english.pdf">
-                            <i class="fa-solid fa-file-arrow-down fa-2x fa-hover-elevate" title="resume"></i>en</a></li>            
+                        <strong>~12k</strong>
+                        <span>end users served</span>
+                    </li>
                     <li>
-                        <a href="assets/monykpenafor_PT.pdf" target="_blank" download="MonykPenafor_portugues.pdf">
-                            <i class="fa-solid fa-file-arrow-down fa-2x fa-hover-elevate" title="curriculo"></i>pt</a></li>
+                        <strong>C2</strong>
+                        <span>English proficiency (EF SET)</span>
+                    </li>
                 </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- ================================ ABOUT ================================ -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="accent">01.</span> About me</h2>
 
-    <section id="projects">
-        <div class="container">
-            <h2>PROJECTS</h2>
-            
-            <div class="card-deck">
-                
-                <div class="card-container">
-                   
-                    <div class="card">
-                        <a href="https://github.com/MonykPenafor/WEBSCRAPING" target="_blank">
-                            <img src="images\webscraping.png" class="card-img-top" alt="..."></a>
-                        <div class="card-body">
-                            <h5 class="card-title">Web Scraping with  Python</h5>
-                            <p class="card-text">This python project uses selenium to automate interaction with the website, navigating through pages and clicking on buttons. Then, the data is extracted using BeautifulSoup and organized into a CSV file.</p>
-                            <p class="card-text">Key Words: Python, BeautifulSoup4, Selenium, Pandas.</p>
-                            <a href="https://github.com/MonykPenafor/WEBSCRAPING" target="_blank">GitHub</a>
-                        </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I'm a Full-Stack Developer working in the <strong>C#/.NET ecosystem</strong>, with
+                            ASP.NET, SQL Server and Angular. My work covers the development, maintenance and
+                            continuous improvement of web systems and APIs.
+                        </p>
+                        <p>
+                            Today I work on a <strong>large-scale ERP for the automotive sector</strong>, serving over
+                            1,000 companies and about 12,000 users. I deliver new features, system integrations and
+                            business process improvements across different application layers, following
+                            <strong>SOLID</strong>, <strong>Domain-Driven Design</strong> and <strong>Clean Architecture</strong>.
+                        </p>
+                        <p>
+                            I work in agile teams using Scrum and Kanban, write unit tests, review code and manage
+                            source control in Azure DevOps, and use and monitor CI/CD pipelines. I'm always looking to
+                            go deeper into software architecture and scalable solutions that balance technical
+                            quality with real business needs.
+                        </p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-
-    <section id="education">
-        <div class="container">
-            <h2 class="title">EDUCATION</h2>
-
-            <div class="card-deck">
-
-                <div class="card-container">  
-                    <div class="card">
-                        <img src="images\ec-images\ifmt.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Undergraduate student in Internet Systems Technology. 2021-2024</p>
-                        </div>
-                    </div>
+                    <aside class="about-facts" aria-label="Quick facts">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i><span>Cuiabá, Mato Grosso, Brazil</span></li>
+                            <li><i class="fa-solid fa-briefcase"></i><span>Full-Stack Developer at Movere Software</span></li>
+                            <li><i class="fa-solid fa-graduation-cap"></i><span>Systems for the Internet, IFMT</span></li>
+                            <li><i class="fa-solid fa-language"></i><span>Portuguese · Spanish · English (C2)</span></li>
+                        </ul>
+                    </aside>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-
-    <section id="work-history">
-        <div class="container">
-            <h2 class="title">WORK HISTORY</H2>
-
-            <div class="card-mb-7">
-                <div class="row no-gutters">
-                    <div class="col-md-3">
-                    <img src="images\favicons\plant.ico" class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-9">
-                        <div class="card-body">
-                            <h5 class="card-title">I'm still looking for my first job</h5>
-                            <p class="card-text">I don't have real work experiences for now.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 06/2024</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--                         
-            <div class="card-mb-7">
-                <div class="row no-gutters">
-                    <div class="col-md-9">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <img src="images\favicons\plant.ico" class="card-img" alt="...">
-                    </div>
-                </div>
-            </div> -->
-
-        </div>
-    </section>
-
-
-    <footer>
-        <div class="container">
-            <div class="socialmedia">
-                <ul>
-                    <li>
-                        <a href="https://www.linkedin.com/in/monykpenafor/" target="_blank">
-                            <i class="fab fa-linkedin fa-2x fa-hover-elevate" ></i></a></li>            
-                    <li>
-                        <a href="https://github.com/MonykPenafor" target="_blank">
-                            <i class="fab fa-github fa-2x fa-hover-elevate"></i></a></li>
-                    <li>
-                        <a href="assets/monykpenafor_EN.pdf" target="_blank" download="MonykPenafor_english.pdf">
-                            <i class="fa-solid fa-file-arrow-down fa-2x fa-hover-elevate" title="resume"></i>en</a></li>            
-                    <li>
-                        <a href="assets/monykpenafor_PT.pdf" target="_blank" download="MonykPenafor_portugues.pdf">
-                            <i class="fa-solid fa-file-arrow-down fa-2x fa-hover-elevate" title="curriculo"></i>pt</a></li>
+                <h3 class="subheading">What I work on</h3>
+                <ul class="focus-grid">
+                    <li class="focus-card">
+                        <i class="fa-solid fa-plug"></i>
+                        <h4>API &amp; service integrations</h4>
+                        <p>E-commerce platforms such as Shopify, Webstore and TrayCorp, plus banking APIs and payment reconciliation (Sipag, Equals, C6 Bank).</p>
+                    </li>
+                    <li class="focus-card">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <h4>Features &amp; business processes</h4>
+                        <p>New workflows for pricing, inventory and sales, with business rules and validations that keep data consistent and operations reliable.</p>
+                    </li>
+                    <li class="focus-card">
+                        <i class="fa-solid fa-database"></i>
+                        <h4>Database development</h4>
+                        <p>Stored procedures, SQL queries and database structures, along with the business and data logic that lives in them.</p>
+                    </li>
+                    <li class="focus-card">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <h4>Reports</h4>
+                        <p>Custom reports built from user requirements with reporting tools and SQL.</p>
+                    </li>
+                    <li class="focus-card">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <h4>Maintenance &amp; evolution</h4>
+                        <p>Analyzing and improving existing features, tracking down issues and optimizing processes.</p>
+                    </li>
+                    <li class="focus-card">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <h4>Quality &amp; delivery</h4>
+                        <p>Unit tests, code reviews and source control in Azure DevOps, with CI/CD pipelines.</p>
+                    </li>
                 </ul>
             </div>
+        </section>
+
+        <!-- ============================== EXPERIENCE ============================== -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="accent">02.</span> Experience</h2>
+
+                <!--
+                    Durations ("1 yr 11 mos") are calculated by main.js from data-start / data-end (YYYY-MM).
+                    Leave data-end out for a current role.
+                -->
+                <div class="xp-list">
+
+                    <article class="xp-company">
+                        <header class="xp-company-head">
+                            <div class="xp-logo xp-logo--movere" aria-hidden="true">M</div>
+                            <div>
+                                <h3>Movere Software</h3>
+                                <p class="xp-meta">
+                                    <span class="duration" data-start="2024-04"></span>
+                                    · Cuiabá, Mato Grosso, Brazil
+                                </p>
+                            </div>
+                        </header>
+
+                        <ol class="timeline">
+                            <li class="timeline-item is-current">
+                                <div class="xp-role-head">
+                                    <h4>Full-Stack Developer</h4>
+                                    <span class="badge badge-live">Current</span>
+                                </div>
+                                <p class="xp-meta">
+                                    Jan 2025 – Present · <span class="duration" data-start="2025-01"></span>
+                                    · Full-time · On-site
+                                </p>
+                                <ul class="xp-points">
+                                    <li>Develop and maintain a large-scale automotive ERP used by 1,000+ companies and ~12,000 users.</li>
+                                    <li>Build integrations with e-commerce platforms (Shopify, Webstore, TrayCorp) and with banking and payment reconciliation APIs (Sipag, Equals, C6 Bank).</li>
+                                    <li>Implement pricing, inventory and sales features end-to-end, from Angular screens through .NET APIs down to SQL Server stored procedures.</li>
+                                    <li>Create custom reports and keep data consistent through business rules and validations.</li>
+                                    <li>Write unit tests, review code and work with CI/CD pipelines in Azure DevOps, in Scrum/Kanban teams.</li>
+                                </ul>
+                                <ul class="tags tags-sm">
+                                    <li>C#</li>
+                                    <li>.NET</li>
+                                    <li>ASP.NET</li>
+                                    <li>Angular</li>
+                                    <li>SQL Server</li>
+                                    <li>REST APIs</li>
+                                    <li>Azure DevOps</li>
+                                </ul>
+                            </li>
+
+                            <li class="timeline-item">
+                                <div class="xp-role-head">
+                                    <h4>Software Developer Intern</h4>
+                                </div>
+                                <p class="xp-meta">
+                                    Apr 2024 – Dec 2024 · <span class="duration" data-start="2024-04" data-end="2024-12"></span>
+                                    · Internship
+                                </p>
+                                <ul class="xp-points">
+                                    <li>Built internal projects that improved and automated processes for colleagues, working with a high degree of autonomy.</li>
+                                    <li>Contributed to the system's technical documentation.</li>
+                                    <li>Helped deliver features to clients and tested new functionality to ensure quality.</li>
+                                </ul>
+                                <ul class="tags tags-sm">
+                                    <li>C#</li>
+                                    <li>.NET</li>
+                                    <li>SQL Server</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </article>
+
+                    <!-- Earlier, non-tech roles: kept compact -->
+                    <details class="xp-earlier">
+                        <summary>
+                            <span>Earlier experience</span>
+                            <small>Administrative and customer service roles, 2018 – 2021</small>
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </summary>
+
+                        <ol class="timeline">
+                            <li class="timeline-item">
+                                <div class="xp-role-head">
+                                    <h4>Notary Assistant</h4>
+                                </div>
+                                <p class="xp-meta">
+                                    2º Serviço Notarial e Registral de Poconé-MT · Jun 2021 – Dec 2021 ·
+                                    <span class="duration" data-start="2021-06" data-end="2021-12"></span> · Full-time
+                                </p>
+                                <p>
+                                    Drafted powers of attorney and deeds, registered clients, issued duplicate birth,
+                                    marriage and death certificates, and handled document organization.
+                                </p>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="xp-role-head">
+                                    <h4>Front Office Assistant</h4>
+                                </div>
+                                <p class="xp-meta">
+                                    DibTop Informática · Aug 2018 – May 2021 ·
+                                    <span class="duration" data-start="2018-08" data-end="2021-05"></span> · Part-time
+                                </p>
+                                <p>
+                                    Handled administrative tasks: printing and typing documents, designing flyers,
+                                    customer service, formatting computers and organizing the office.
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ SKILLS ================================ -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="accent">03.</span> Skills</h2>
+
+                <!-- To add or remove a technology, edit the lists below. "tag-core" highlights the main ones. -->
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3><i class="fa-solid fa-server"></i> Back-end</h3>
+                        <ul class="tags">
+                            <li class="tag-core">C#</li>
+                            <li class="tag-core">.NET</li>
+                            <li class="tag-core">ASP.NET</li>
+                            <li class="tag-core">REST APIs</li>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3><i class="fa-solid fa-display"></i> Front-end</h3>
+                        <ul class="tags">
+                            <li class="tag-core">Angular</li>
+                            <li class="tag-core">TypeScript</li>
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3><i class="fa-solid fa-database"></i> Data</h3>
+                        <ul class="tags">
+                            <li class="tag-core">SQL Server</li>
+                            <li class="tag-core">Stored procedures</li>
+                            <li>PostgreSQL</li>
+                            <li>MySQL</li>
+                            <li>Firebase</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3><i class="fa-solid fa-infinity"></i> DevOps &amp; tools</h3>
+                        <ul class="tags">
+                            <li class="tag-core">Azure DevOps</li>
+                            <li class="tag-core">CI/CD</li>
+                            <li>Git</li>
+                            <li>Unit testing</li>
+                            <li>Code review</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3><i class="fa-solid fa-sitemap"></i> Architecture</h3>
+                        <ul class="tags">
+                            <li class="tag-core">SOLID</li>
+                            <li class="tag-core">Domain-Driven Design</li>
+                            <li class="tag-core">Clean Architecture</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3><i class="fa-solid fa-people-group"></i> Ways of working</h3>
+                        <ul class="tags">
+                            <li class="tag-core">Scrum</li>
+                            <li class="tag-core">Kanban</li>
+                            <li>Technical documentation</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3><i class="fa-solid fa-mobile-screen"></i> Mobile</h3>
+                        <ul class="tags">
+                            <li>Flutter</li>
+                            <li>Dart</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3><i class="fa-solid fa-earth-americas"></i> Languages</h3>
+                        <ul class="lang-list">
+                            <li><span>Portuguese</span><small>Native</small></li>
+                            <li><span>Spanish</span><small>Native / bilingual</small></li>
+                            <li><span>English</span><small>Professional · C2 (EF SET)</small></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="legend"><span class="legend-swatch"></span> Highlighted: what I use every day at work</p>
+            </div>
+        </section>
+
+        <!-- =============================== PROJECTS =============================== -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="accent">04.</span> Projects</h2>
+                <p class="section-intro">Academic and personal projects I built while studying.</p>
+
+                <!-- Filter buttons: each card's data-category must match a button's data-filter -->
+                <div class="filters" role="group" aria-label="Filter projects">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-btn" data-filter="backend" aria-pressed="false">Back-end</button>
+                    <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+                    <button class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button>
+                    <button class="filter-btn" data-filter="desktop" aria-pressed="false">Desktop</button>
+                    <button class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!--
+                        To add a project, copy a whole <article> block.
+                        With a screenshot: put an <img> inside .project-thumb (like Web Scraping).
+                        Without one: use .project-thumb--icon with an icon (https://fontawesome.com/icons).
+                    -->
+
+                    <article class="project-card" data-category="backend">
+                        <a class="project-thumb project-thumb--icon" href="https://github.com/MonykPenafor/Servidor_Restaurante" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                            <i class="fa-solid fa-utensils"></i>
+                        </a>
+                        <div class="project-body">
+                            <span class="project-type">Back-end</span>
+                            <h3>Restaurant REST API</h3>
+                            <p>
+                                Sales and meal delivery management: products, daily menus, orders, inventory
+                                control and management reports. Includes a client project that consumes the API,
+                                with unit tests.
+                            </p>
+                            <ul class="tags tags-sm">
+                                <li>Java</li>
+                                <li>Maven</li>
+                                <li>REST</li>
+                                <li>Unit tests</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/MonykPenafor/Servidor_Restaurante" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Server</a>
+                                <a href="https://github.com/MonykPenafor/Cliente_Restaurante" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Client</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <a class="project-thumb project-thumb--icon" href="https://github.com/MonykPenafor/Flashcard_Generator" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                            <i class="fa-solid fa-language"></i>
+                        </a>
+                        <div class="project-body">
+                            <span class="project-type">Web</span>
+                            <h3>Flashcard Generator</h3>
+                            <p>
+                                Generates vocabulary flashcards for language learning, with support for different
+                                writing systems such as Japanese. Its data comes from a Python scraper that collects
+                                words from a language website.
+                            </p>
+                            <ul class="tags tags-sm">
+                                <li>C#</li>
+                                <li>ASP.NET Web Forms</li>
+                                <li>Python</li>
+                                <li>Selenium</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/MonykPenafor/Flashcard_Generator" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Generator</a>
+                                <a href="https://github.com/MonykPenafor/Raspagem-de-dados" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Scraper</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="mobile">
+                        <a class="project-thumb project-thumb--icon" href="https://github.com/MonykPenafor/Event_Planner" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </a>
+                        <div class="project-body">
+                            <span class="project-type">Mobile</span>
+                            <h3>Event Planner</h3>
+                            <p>
+                                Event organizer app: events and tasks, budget and expense tracking, a monthly
+                                calendar, charts of the most planned event types, and login with per-user data.
+                            </p>
+                            <ul class="tags tags-sm">
+                                <li>Flutter</li>
+                                <li>Dart</li>
+                                <li>Firebase</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/MonykPenafor/Event_Planner" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="mobile">
+                        <a class="project-thumb project-thumb--icon" href="https://github.com/MonykPenafor/app_lcc" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <div class="project-body">
+                            <span class="project-type">Mobile</span>
+                            <h3>Shared Shopping List</h3>
+                            <p>
+                                Shopping list app that several people can share, with data kept in sync
+                                through Firebase.
+                            </p>
+                            <ul class="tags tags-sm">
+                                <li>Flutter</li>
+                                <li>Dart</li>
+                                <li>Firebase</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/MonykPenafor/app_lcc" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="desktop">
+                        <a class="project-thumb project-thumb--icon" href="https://github.com/MonykPenafor/DibTop" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                            <i class="fa-solid fa-school"></i>
+                        </a>
+                        <div class="project-body">
+                            <span class="project-type">Desktop</span>
+                            <h3>DibTop</h3>
+                            <p>
+                                Desktop school administration app with CRUD for students, teachers and
+                                subjects across more than five screens.
+                            </p>
+                            <ul class="tags tags-sm">
+                                <li>Python</li>
+                                <li>Kivy</li>
+                                <li>PostgreSQL</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/MonykPenafor/DibTop" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="automation">
+                        <a class="project-thumb" href="https://github.com/MonykPenafor/WEBSCRAPING" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                            <img src="images/webscraping.png" alt="" loading="lazy">
+                        </a>
+                        <div class="project-body">
+                            <span class="project-type">Automation</span>
+                            <h3>Web Scraping with Python</h3>
+                            <p>
+                                Automates browsing a website with Selenium (pages and buttons), extracts the data
+                                with BeautifulSoup and organizes it into a CSV file with Pandas.
+                            </p>
+                            <ul class="tags tags-sm">
+                                <li>Python</li>
+                                <li>Selenium</li>
+                                <li>BeautifulSoup4</li>
+                                <li>Pandas</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/MonykPenafor/WEBSCRAPING" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p class="more-link">
+                    <a href="https://github.com/MonykPenafor?tab=repositories" target="_blank" rel="noopener">
+                        See all repositories on GitHub <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ======================= EDUCATION & CERTIFICATIONS ======================= -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title"><span class="accent">05.</span> Education &amp; certifications</h2>
+
+                <div class="edu-grid">
+                    <article class="edu-card edu-card--main">
+                        <img src="images/ec-images/ifmt.png" alt="" width="48" height="48">
+                        <div>
+                            <span class="edu-kicker">Degree · Sep 2021 – Jun 2025</span>
+                            <h3>Technology in Systems for the Internet</h3>
+                            <p>Federal Institute of Education, Science and Technology of Mato Grosso (IFMT)</p>
+                            <p class="edu-note">
+                                An undergraduate technology degree in web development, covering front-end,
+                                back-end, databases and software engineering.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="edu-card">
+                        <div class="edu-icon" aria-hidden="true"><i class="fa-solid fa-certificate"></i></div>
+                        <div>
+                            <span class="edu-kicker">EF SET · Issued Mar 2024</span>
+                            <h3>EF SET English Certificate</h3>
+                            <p class="score">
+                                <strong>72</strong>/100 · <span class="badge">C2 Proficient</span>
+                            </p>
+                            <a class="edu-link" href="https://cert.efset.org/LYNcvv" target="_blank" rel="noopener">
+                                Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="edu-card">
+                        <div class="edu-icon" aria-hidden="true"><i class="fa-brands fa-python"></i></div>
+                        <div>
+                            <span class="edu-kicker">Cisco Networking Academy · Issued Oct 2022</span>
+                            <h3>PCAP: Programming Essentials in Python</h3>
+                            <ul class="tags tags-sm"><li>Python</li></ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================ CONTACT ================================ -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2 class="section-title"><span class="accent">06.</span> Get in touch</h2>
+                <p class="contact-text">
+                    I'm open to new opportunities and collaborations. The best way to reach me is on LinkedIn.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="https://www.linkedin.com/in/monykpenafor/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a class="btn btn-ghost" href="https://github.com/MonykPenafor" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                    <!--
+                        Resume: put the PDF in assets/ and uncomment the link below.
+                        <a class="btn btn-ghost" href="assets/monykpenafor_EN.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+                    -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================================ FOOTER ================================ -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Monyk Paola Penafor</p>
+            <ul class="social">
+                <li><a href="https://github.com/MonykPenafor" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/monykpenafor/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
         </div>
     </footer>
 
-
-    <!-- JavaScript  -->
-    <script src="assets\js\main.js"></script>
-
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
