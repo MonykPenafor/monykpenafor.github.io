@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -37,12 +37,12 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a data-i18n="skip" class="skip-link" href="#main">Skip to content</a>
 
     <!-- ============================ HEADER / NAV ============================ -->
     <header class="site-header">
-        <nav class="nav container" aria-label="Main">
-            <a class="nav-logo" href="#home" aria-label="Back to top">
+        <nav data-i18n-aria="aria.nav" class="nav container" aria-label="Main">
+            <a data-i18n-aria="aria.logo" class="nav-logo" href="#home" aria-label="Back to top">
                 <img src="images/favicons/dragon.ico" alt="" width="28" height="28">
                 <span>monyk<span class="accent">.dev</span></span>
             </a>
@@ -52,14 +52,19 @@
             </button>
 
             <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a data-i18n="nav.about" href="#about">About</a></li>
+                <li><a data-i18n="nav.experience" href="#experience">Experience</a></li>
+                <li><a data-i18n="nav.skills" href="#skills">Skills</a></li>
+                <li><a data-i18n="nav.projects" href="#projects">Projects</a></li>
+                <li><a data-i18n="nav.education" href="#education">Education</a></li>
+                <li><a data-i18n="nav.contact" href="#contact">Contact</a></li>
                 <li>
-                    <button class="theme-toggle" aria-label="Toggle light/dark theme">
+                    <button class="lang-toggle" type="button" aria-label="Mudar idioma para português" title="English / Português">
+                        <span data-lang="en">EN</span><span data-lang="pt">PT</span>
+                    </button>
+                </li>
+                <li>
+                    <button data-i18n-aria="aria.theme" class="theme-toggle" aria-label="Toggle light/dark theme">
                         <i class="fa-solid fa-moon"></i>
                     </button>
                 </li>
@@ -76,18 +81,18 @@
                 <div class="hero-content">
                     <p class="hero-status">
                         <span class="status-dot" aria-hidden="true"></span>
-                        <span>Currently building ERP software at <strong>Movere Software</strong></span>
+                        <span data-i18n="hero.status">Currently building ERP software at <strong>Movere Software</strong></span>
                     </p>
                     <h1 class="hero-name">Monyk Paola Penafor</h1>
-                    <p class="hero-role"><span class="accent">Full-Stack Developer</span> · C# · .NET · Angular · SQL&nbsp;Server</p>
-                    <p class="hero-text">
+                    <p data-i18n="hero.role" class="hero-role"><span class="accent">Full-Stack Developer</span> · C# · .NET · Angular · SQL&nbsp;Server</p>
+                    <p data-i18n="hero.text" class="hero-text">
                         I build and maintain web systems and APIs for a large-scale automotive ERP used by
                         more than 1,000 companies, from integrations and business rules to reports and databases.
                     </p>
 
                     <div class="hero-actions">
-                        <a class="btn btn-primary" href="#experience">See my experience</a>
-                        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+                        <a data-i18n="hero.cta1" class="btn btn-primary" href="#experience">See my experience</a>
+                        <a data-i18n="hero.cta2" class="btn btn-ghost" href="#contact">Get in touch</a>
                     </div>
 
                     <ul class="social">
@@ -102,7 +107,7 @@
                 -->
                 <figure class="art-print">
                     <svg class="art-svg" viewBox="0 0 440 620" role="img" aria-labelledby="art-title">
-                      <title id="art-title">Hand-drawn street corner signpost. The signs read C#, .NET, Angular, SQL Server, SOLID, Azure and REST API, and speech bubbles say Hello, Olá and Hola.</title>
+                      <title data-i18n="art.title" id="art-title">Hand-drawn street corner signpost. The signs read C#, .NET, Angular, SQL Server, SOLID, Azure and REST API, and speech bubbles say Hello, Olá and Hola.</title>
                       <defs>
                         <filter id="sp-paint" x="-5%" y="-5%" width="110%" height="110%">
                           <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="7" result="grain"/>
@@ -241,19 +246,19 @@
                 <ul class="stats">
                     <li>
                         <strong data-years-since="2024-04">2+</strong>
-                        <span>years as a developer</span>
+                        <span data-i18n="stat.years">years as a developer</span>
                     </li>
                     <li>
-                        <strong>1,000+</strong>
-                        <span>companies using the ERP I work on</span>
+                        <strong data-i18n="stat.companiesNum">1,000+</strong>
+                        <span data-i18n="stat.companies">companies using the ERP I work on</span>
                     </li>
                     <li>
-                        <strong>~12k</strong>
-                        <span>end users served</span>
+                        <strong data-i18n="stat.usersNum">~12k</strong>
+                        <span data-i18n="stat.users">end users served</span>
                     </li>
                     <li>
                         <strong>C2</strong>
-                        <span>English proficiency (EF SET)</span>
+                        <span data-i18n="stat.english">English proficiency (EF SET)</span>
                     </li>
                 </ul>
             </div>
@@ -261,23 +266,26 @@
 
         <!-- ================================ ABOUT ================================ -->
         <section id="about" class="section">
-            <div class="container">
-                <h2 class="section-title"><span class="accent">01.</span> About me</h2>
+            <div class="container container--narrow">
+                <header class="section-head">
+                    <p data-i18n="about.eyebrow" class="eyebrow">01 · About</p>
+                    <h2 data-i18n="about.title" class="section-title">About me</h2>
+                </header>
 
                 <div class="about-grid">
                     <div class="about-text">
-                        <p>
+                        <p data-i18n="about.p1">
                             I'm a Full-Stack Developer working in the <strong>C#/.NET ecosystem</strong>, with
                             ASP.NET, SQL Server and Angular. My work covers the development, maintenance and
                             continuous improvement of web systems and APIs.
                         </p>
-                        <p>
+                        <p data-i18n="about.p2">
                             Today I work on a <strong>large-scale ERP for the automotive sector</strong>, serving over
                             1,000 companies and about 12,000 users. I deliver new features, system integrations and
                             business process improvements across different application layers, following
                             <strong>SOLID</strong>, <strong>Domain-Driven Design</strong> and <strong>Clean Architecture</strong>.
                         </p>
-                        <p>
+                        <p data-i18n="about.p3">
                             I work in agile teams using Scrum and Kanban, write unit tests, review code and manage
                             source control in Azure DevOps, and use and monitor CI/CD pipelines. I'm always looking to
                             go deeper into software architecture and scalable solutions that balance technical
@@ -285,47 +293,47 @@
                         </p>
                     </div>
 
-                    <aside class="about-facts" aria-label="Quick facts">
+                    <aside data-i18n-aria="aria.facts" class="about-facts" aria-label="Quick facts">
                         <ul>
-                            <li><i class="fa-solid fa-location-dot"></i><span>Cuiabá, Mato Grosso, Brazil</span></li>
-                            <li><i class="fa-solid fa-briefcase"></i><span>Full-Stack Developer at Movere Software</span></li>
-                            <li><i class="fa-solid fa-graduation-cap"></i><span>Systems for the Internet, IFMT</span></li>
-                            <li><i class="fa-solid fa-language"></i><span>Portuguese · Spanish · English (C2)</span></li>
+                            <li><i class="fa-solid fa-location-dot"></i><span data-i18n="fact.location">Cuiabá, Mato Grosso, Brazil</span></li>
+                            <li><i class="fa-solid fa-briefcase"></i><span data-i18n="fact.job">Full-Stack Developer at Movere Software</span></li>
+                            <li><i class="fa-solid fa-graduation-cap"></i><span data-i18n="fact.degree">Systems for the Internet, IFMT</span></li>
+                            <li><i class="fa-solid fa-language"></i><span data-i18n="fact.langs">Portuguese · Spanish · English (C2)</span></li>
                         </ul>
                     </aside>
                 </div>
 
-                <h3 class="subheading">What I work on</h3>
+                <h3 data-i18n="about.focus" class="subheading">What I work on</h3>
                 <ul class="focus-grid">
                     <li class="focus-card">
                         <i class="fa-solid fa-plug"></i>
-                        <h4>API &amp; service integrations</h4>
-                        <p>E-commerce platforms such as Shopify, Webstore and TrayCorp, plus banking APIs and payment reconciliation (Sipag, Equals, C6 Bank).</p>
+                        <h4 data-i18n="focus.integrations.title">API &amp; service integrations</h4>
+                        <p data-i18n="focus.integrations.text">E-commerce platforms such as Shopify, Webstore and TrayCorp, plus banking APIs and payment reconciliation (Sipag, Equals, C6 Bank).</p>
                     </li>
                     <li class="focus-card">
                         <i class="fa-solid fa-diagram-project"></i>
-                        <h4>Features &amp; business processes</h4>
-                        <p>New workflows for pricing, inventory and sales, with business rules and validations that keep data consistent and operations reliable.</p>
+                        <h4 data-i18n="focus.features.title">Features &amp; business processes</h4>
+                        <p data-i18n="focus.features.text">New workflows for pricing, inventory and sales, with business rules and validations that keep data consistent and operations reliable.</p>
                     </li>
                     <li class="focus-card">
                         <i class="fa-solid fa-database"></i>
-                        <h4>Database development</h4>
-                        <p>Stored procedures, SQL queries and database structures, along with the business and data logic that lives in them.</p>
+                        <h4 data-i18n="focus.database.title">Database development</h4>
+                        <p data-i18n="focus.database.text">Stored procedures, SQL queries and database structures, along with the business and data logic that lives in them.</p>
                     </li>
                     <li class="focus-card">
                         <i class="fa-solid fa-chart-column"></i>
-                        <h4>Reports</h4>
-                        <p>Custom reports built from user requirements with reporting tools and SQL.</p>
+                        <h4 data-i18n="focus.reports.title">Reports</h4>
+                        <p data-i18n="focus.reports.text">Custom reports built from user requirements with reporting tools and SQL.</p>
                     </li>
                     <li class="focus-card">
                         <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <h4>Maintenance &amp; evolution</h4>
-                        <p>Analyzing and improving existing features, tracking down issues and optimizing processes.</p>
+                        <h4 data-i18n="focus.maintenance.title">Maintenance &amp; evolution</h4>
+                        <p data-i18n="focus.maintenance.text">Analyzing and improving existing features, tracking down issues and optimizing processes.</p>
                     </li>
                     <li class="focus-card">
                         <i class="fa-solid fa-code-branch"></i>
-                        <h4>Quality &amp; delivery</h4>
-                        <p>Unit tests, code reviews and source control in Azure DevOps, with CI/CD pipelines.</p>
+                        <h4 data-i18n="focus.quality.title">Quality &amp; delivery</h4>
+                        <p data-i18n="focus.quality.text">Unit tests, code reviews and source control in Azure DevOps, with CI/CD pipelines.</p>
                     </li>
                 </ul>
             </div>
@@ -333,8 +341,11 @@
 
         <!-- ============================== EXPERIENCE ============================== -->
         <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title"><span class="accent">02.</span> Experience</h2>
+            <div class="container container--narrow">
+                <header class="section-head">
+                    <p data-i18n="xp.eyebrow" class="eyebrow">02 · Experience</p>
+                    <h2 data-i18n="xp.title" class="section-title">Where I've worked</h2>
+                </header>
 
                 <!--
                     Durations ("1 yr 11 mos") are calculated by main.js from data-start / data-end (YYYY-MM).
@@ -347,7 +358,7 @@
                             <div class="xp-logo xp-logo--movere" aria-hidden="true">M</div>
                             <div>
                                 <h3>Movere Software</h3>
-                                <p class="xp-meta">
+                                <p data-i18n="xp.movere.meta" class="xp-meta">
                                     <span class="duration" data-start="2024-04"></span>
                                     · Cuiabá, Mato Grosso, Brazil
                                 </p>
@@ -357,14 +368,14 @@
                         <ol class="timeline">
                             <li class="timeline-item is-current">
                                 <div class="xp-role-head">
-                                    <h4>Full-Stack Developer</h4>
-                                    <span class="badge badge-live">Current</span>
+                                    <h4 data-i18n="xp.fullstack.role">Full-Stack Developer</h4>
+                                    <span data-i18n="xp.current" class="badge badge-live">Current</span>
                                 </div>
-                                <p class="xp-meta">
+                                <p data-i18n="xp.fullstack.meta" class="xp-meta">
                                     Jan 2025 – Present · <span class="duration" data-start="2025-01"></span>
                                     · Full-time · On-site
                                 </p>
-                                <ul class="xp-points">
+                                <ul data-i18n="xp.fullstack.points" class="xp-points">
                                     <li>Develop and maintain a large-scale automotive ERP used by 1,000+ companies and ~12,000 users.</li>
                                     <li>Build integrations with e-commerce platforms (Shopify, Webstore, TrayCorp) and with banking and payment reconciliation APIs (Sipag, Equals, C6 Bank).</li>
                                     <li>Implement pricing, inventory and sales features end-to-end, from Angular screens through .NET APIs down to SQL Server stored procedures.</li>
@@ -384,13 +395,13 @@
 
                             <li class="timeline-item">
                                 <div class="xp-role-head">
-                                    <h4>Software Developer Intern</h4>
+                                    <h4 data-i18n="xp.intern.role">Software Developer Intern</h4>
                                 </div>
-                                <p class="xp-meta">
+                                <p data-i18n="xp.intern.meta" class="xp-meta">
                                     Apr 2024 – Dec 2024 · <span class="duration" data-start="2024-04" data-end="2024-12"></span>
                                     · Internship
                                 </p>
-                                <ul class="xp-points">
+                                <ul data-i18n="xp.intern.points" class="xp-points">
                                     <li>Built internal projects that improved and automated processes for colleagues, working with a high degree of autonomy.</li>
                                     <li>Contributed to the system's technical documentation.</li>
                                     <li>Helped deliver features to clients and tested new functionality to ensure quality.</li>
@@ -407,34 +418,34 @@
                     <!-- Earlier, non-tech roles: kept compact -->
                     <details class="xp-earlier">
                         <summary>
-                            <span>Earlier experience</span>
-                            <small>Administrative and customer service roles, 2018 – 2021</small>
+                            <span data-i18n="xp.earlier.title">Earlier experience</span>
+                            <small data-i18n="xp.earlier.sub">Administrative and customer service roles, 2018 – 2021</small>
                             <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
                         </summary>
 
                         <ol class="timeline">
                             <li class="timeline-item">
                                 <div class="xp-role-head">
-                                    <h4>Notary Assistant</h4>
+                                    <h4 data-i18n="xp.notary.role">Notary Assistant</h4>
                                 </div>
-                                <p class="xp-meta">
+                                <p data-i18n="xp.notary.meta" class="xp-meta">
                                     2º Serviço Notarial e Registral de Poconé-MT · Jun 2021 – Dec 2021 ·
                                     <span class="duration" data-start="2021-06" data-end="2021-12"></span> · Full-time
                                 </p>
-                                <p>
+                                <p data-i18n="xp.notary.text">
                                     Drafted powers of attorney and deeds, registered clients, issued duplicate birth,
                                     marriage and death certificates, and handled document organization.
                                 </p>
                             </li>
                             <li class="timeline-item">
                                 <div class="xp-role-head">
-                                    <h4>Front Office Assistant</h4>
+                                    <h4 data-i18n="xp.frontoffice.role">Front Office Assistant</h4>
                                 </div>
-                                <p class="xp-meta">
+                                <p data-i18n="xp.frontoffice.meta" class="xp-meta">
                                     DibTop Informática · Aug 2018 – May 2021 ·
                                     <span class="duration" data-start="2018-08" data-end="2021-05"></span> · Part-time
                                 </p>
-                                <p>
+                                <p data-i18n="xp.frontoffice.text">
                                     Handled administrative tasks: printing and typing documents, designing flyers,
                                     customer service, formatting computers and organizing the office.
                                 </p>
@@ -448,7 +459,10 @@
         <!-- ================================ SKILLS ================================ -->
         <section id="skills" class="section">
             <div class="container">
-                <h2 class="section-title"><span class="accent">03.</span> Skills</h2>
+                <header class="section-head">
+                    <p data-i18n="skills.eyebrow" class="eyebrow">03 · Skills</p>
+                    <h2 data-i18n="skills.title" class="section-title">Tech I work with</h2>
+                </header>
 
                 <!-- To add or remove a technology, edit the lists below. "tag-core" highlights the main ones. -->
                 <div class="skills-grid">
@@ -478,7 +492,7 @@
                     </div>
 
                     <div class="skill-group">
-                        <h3><i class="fa-solid fa-database"></i> Data</h3>
+                        <h3 data-i18n="skills.data"><i class="fa-solid fa-database"></i> Data</h3>
                         <ul class="tags">
                             <li class="tag-core">SQL Server</li>
                             <li class="tag-core">Stored procedures</li>
@@ -489,19 +503,19 @@
                     </div>
 
                     <div class="skill-group">
-                        <h3><i class="fa-solid fa-infinity"></i> DevOps &amp; tools</h3>
+                        <h3 data-i18n="skills.devops"><i class="fa-solid fa-infinity"></i> DevOps &amp; tools</h3>
                         <ul class="tags">
                             <li class="tag-core">Azure DevOps</li>
                             <li class="tag-core">CI/CD</li>
                             <li>Git</li>
-                            <li>Unit testing</li>
+                            <li data-i18n="tag.unitTesting">Unit testing</li>
                             <li>Code review</li>
                             <li>Figma</li>
                         </ul>
                     </div>
 
                     <div class="skill-group">
-                        <h3><i class="fa-solid fa-sitemap"></i> Architecture</h3>
+                        <h3 data-i18n="skills.arch"><i class="fa-solid fa-sitemap"></i> Architecture</h3>
                         <ul class="tags">
                             <li class="tag-core">SOLID</li>
                             <li class="tag-core">Domain-Driven Design</li>
@@ -510,11 +524,11 @@
                     </div>
 
                     <div class="skill-group">
-                        <h3><i class="fa-solid fa-people-group"></i> Ways of working</h3>
+                        <h3 data-i18n="skills.ways"><i class="fa-solid fa-people-group"></i> Ways of working</h3>
                         <ul class="tags">
                             <li class="tag-core">Scrum</li>
                             <li class="tag-core">Kanban</li>
-                            <li>Technical documentation</li>
+                            <li data-i18n="tag.docs">Technical documentation</li>
                         </ul>
                     </div>
 
@@ -527,33 +541,36 @@
                     </div>
 
                     <div class="skill-group">
-                        <h3><i class="fa-solid fa-earth-americas"></i> Languages</h3>
+                        <h3 data-i18n="skills.langs"><i class="fa-solid fa-earth-americas"></i> Languages</h3>
                         <ul class="lang-list">
-                            <li><span>Portuguese</span><small>Native</small></li>
-                            <li><span>Spanish</span><small>Native / bilingual</small></li>
-                            <li><span>English</span><small>Professional · C2 (EF SET)</small></li>
+                            <li data-i18n="lang.pt"><span>Portuguese</span><small>Native</small></li>
+                            <li data-i18n="lang.es"><span>Spanish</span><small>Native / bilingual</small></li>
+                            <li data-i18n="lang.en"><span>English</span><small>Professional · C2 (EF SET)</small></li>
                         </ul>
                     </div>
                 </div>
 
-                <p class="legend"><span class="legend-swatch"></span> Highlighted: what I use every day at work</p>
+                <p data-i18n="skills.legend" class="legend"><span class="legend-swatch"></span> Highlighted: what I use every day at work</p>
             </div>
         </section>
 
         <!-- =============================== PROJECTS =============================== -->
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title"><span class="accent">04.</span> Projects</h2>
-                <p class="section-intro">Academic and personal projects I built while studying.</p>
+                <header class="section-head">
+                    <p data-i18n="proj.eyebrow" class="eyebrow">04 · Projects</p>
+                    <h2 data-i18n="proj.title" class="section-title">Selected work</h2>
+                    <p data-i18n="proj.intro" class="section-intro">Academic and personal projects I built while studying.</p>
+                </header>
 
                 <!-- Filter buttons: each card's data-category must match a button's data-filter -->
-                <div class="filters" role="group" aria-label="Filter projects">
-                    <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <div data-i18n-aria="aria.filters" class="filters" role="group" aria-label="Filter projects">
+                    <button data-i18n="filter.all" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
                     <button class="filter-btn" data-filter="backend" aria-pressed="false">Back-end</button>
                     <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
                     <button class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button>
                     <button class="filter-btn" data-filter="desktop" aria-pressed="false">Desktop</button>
-                    <button class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button>
+                    <button data-i18n="filter.automation" class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button>
                 </div>
 
                 <div class="projects-grid">
@@ -564,39 +581,15 @@
                         Without one: use .project-thumb--icon with an icon (https://fontawesome.com/icons).
                     -->
 
-                    <article class="project-card" data-category="backend">
-                        <a class="project-thumb project-thumb--icon" href="https://github.com/MonykPenafor/Servidor_Restaurante" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
-                            <i class="fa-solid fa-utensils"></i>
+                    <article class="project-card project-card--featured" data-category="web">
+                        <a class="project-thumb project-thumb--flashcards" href="https://github.com/MonykPenafor/Flashcard_Generator" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                            <span class="fc fc-back"><strong>ねこ</strong><small data-i18n="proj.fc.back">neko · cat</small></span>
+                            <span class="fc fc-front"><strong>猫</strong><small data-i18n="proj.fc.front">tap to flip</small></span>
                         </a>
                         <div class="project-body">
-                            <span class="project-type">Back-end</span>
-                            <h3>Restaurant REST API</h3>
-                            <p>
-                                Sales and meal delivery management: products, daily menus, orders, inventory
-                                control and management reports. Includes a client project that consumes the API,
-                                with unit tests.
-                            </p>
-                            <ul class="tags tags-sm">
-                                <li>Java</li>
-                                <li>Maven</li>
-                                <li>REST</li>
-                                <li>Unit tests</li>
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://github.com/MonykPenafor/Servidor_Restaurante" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Server</a>
-                                <a href="https://github.com/MonykPenafor/Cliente_Restaurante" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Client</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card" data-category="web">
-                        <a class="project-thumb project-thumb--icon" href="https://github.com/MonykPenafor/Flashcard_Generator" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
-                            <i class="fa-solid fa-language"></i>
-                        </a>
-                        <div class="project-body">
-                            <span class="project-type">Web</span>
-                            <h3>Flashcard Generator</h3>
-                            <p>
+                            <span data-i18n="proj.featured" class="project-type">Featured · Web</span>
+                            <h3 data-i18n="proj.flash.title">Flashcard Generator</h3>
+                            <p data-i18n="proj.flash.text">
                                 Generates vocabulary flashcards for language learning, with support for different
                                 writing systems such as Japanese. Its data comes from a Python scraper that collects
                                 words from a language website.
@@ -608,8 +601,33 @@
                                 <li>Selenium</li>
                             </ul>
                             <div class="project-links">
-                                <a href="https://github.com/MonykPenafor/Flashcard_Generator" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Generator</a>
-                                <a href="https://github.com/MonykPenafor/Raspagem-de-dados" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Scraper</a>
+                                <a data-i18n="proj.flash.gen" href="https://github.com/MonykPenafor/Flashcard_Generator" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Generator</a>
+                                <a data-i18n="proj.flash.scraper" href="https://github.com/MonykPenafor/Raspagem-de-dados" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Scraper</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="backend">
+                        <a class="project-thumb project-thumb--icon" href="https://github.com/MonykPenafor/Servidor_Restaurante" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+                            <i class="fa-solid fa-utensils"></i>
+                        </a>
+                        <div class="project-body">
+                            <span class="project-type">Back-end</span>
+                            <h3 data-i18n="proj.rest.title">Restaurant REST API</h3>
+                            <p data-i18n="proj.rest.text">
+                                Sales and meal delivery management: products, daily menus, orders, inventory
+                                control and management reports. Includes a client project that consumes the API,
+                                with unit tests.
+                            </p>
+                            <ul class="tags tags-sm">
+                                <li>Java</li>
+                                <li>Maven</li>
+                                <li>REST</li>
+                                <li data-i18n="tag.unitTests">Unit tests</li>
+                            </ul>
+                            <div class="project-links">
+                                <a data-i18n="proj.rest.server" href="https://github.com/MonykPenafor/Servidor_Restaurante" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Server</a>
+                                <a data-i18n="proj.rest.client" href="https://github.com/MonykPenafor/Cliente_Restaurante" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Client</a>
                             </div>
                         </div>
                     </article>
@@ -621,7 +639,7 @@
                         <div class="project-body">
                             <span class="project-type">Mobile</span>
                             <h3>Event Planner</h3>
-                            <p>
+                            <p data-i18n="proj.events.text">
                                 Event organizer app: events and tasks, budget and expense tracking, a monthly
                                 calendar, charts of the most planned event types, and login with per-user data.
                             </p>
@@ -631,7 +649,7 @@
                                 <li>Firebase</li>
                             </ul>
                             <div class="project-links">
-                                <a href="https://github.com/MonykPenafor/Event_Planner" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://github.com/MonykPenafor/Event_Planner" target="_blank" rel="noopener" data-i18n="proj.code"><i class="fa-brands fa-github"></i> Code</a>
                             </div>
                         </div>
                     </article>
@@ -642,8 +660,8 @@
                         </a>
                         <div class="project-body">
                             <span class="project-type">Mobile</span>
-                            <h3>Shared Shopping List</h3>
-                            <p>
+                            <h3 data-i18n="proj.list.title">Shared Shopping List</h3>
+                            <p data-i18n="proj.list.text">
                                 Shopping list app that several people can share, with data kept in sync
                                 through Firebase.
                             </p>
@@ -653,7 +671,7 @@
                                 <li>Firebase</li>
                             </ul>
                             <div class="project-links">
-                                <a href="https://github.com/MonykPenafor/app_lcc" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://github.com/MonykPenafor/app_lcc" target="_blank" rel="noopener" data-i18n="proj.code"><i class="fa-brands fa-github"></i> Code</a>
                             </div>
                         </div>
                     </article>
@@ -665,7 +683,7 @@
                         <div class="project-body">
                             <span class="project-type">Desktop</span>
                             <h3>DibTop</h3>
-                            <p>
+                            <p data-i18n="proj.dibtop.text">
                                 Desktop school administration app with CRUD for students, teachers and
                                 subjects across more than five screens.
                             </p>
@@ -675,7 +693,7 @@
                                 <li>PostgreSQL</li>
                             </ul>
                             <div class="project-links">
-                                <a href="https://github.com/MonykPenafor/DibTop" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://github.com/MonykPenafor/DibTop" target="_blank" rel="noopener" data-i18n="proj.code"><i class="fa-brands fa-github"></i> Code</a>
                             </div>
                         </div>
                     </article>
@@ -685,9 +703,9 @@
                             <img src="images/webscraping.png" alt="" loading="lazy">
                         </a>
                         <div class="project-body">
-                            <span class="project-type">Automation</span>
-                            <h3>Web Scraping with Python</h3>
-                            <p>
+                            <span data-i18n="proj.type.automation" class="project-type">Automation</span>
+                            <h3 data-i18n="proj.scraping.title">Web Scraping with Python</h3>
+                            <p data-i18n="proj.scraping.text">
                                 Automates browsing a website with Selenium (pages and buttons), extracts the data
                                 with BeautifulSoup and organizes it into a CSV file with Pandas.
                             </p>
@@ -698,7 +716,7 @@
                                 <li>Pandas</li>
                             </ul>
                             <div class="project-links">
-                                <a href="https://github.com/MonykPenafor/WEBSCRAPING" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                                <a href="https://github.com/MonykPenafor/WEBSCRAPING" target="_blank" rel="noopener" data-i18n="proj.code"><i class="fa-brands fa-github"></i> Code</a>
                             </div>
                         </div>
                     </article>
@@ -706,7 +724,7 @@
                 </div>
 
                 <p class="more-link">
-                    <a href="https://github.com/MonykPenafor?tab=repositories" target="_blank" rel="noopener">
+                    <a data-i18n="proj.more" href="https://github.com/MonykPenafor?tab=repositories" target="_blank" rel="noopener">
                         See all repositories on GitHub <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </p>
@@ -715,17 +733,20 @@
 
         <!-- ======================= EDUCATION & CERTIFICATIONS ======================= -->
         <section id="education" class="section">
-            <div class="container">
-                <h2 class="section-title"><span class="accent">05.</span> Education &amp; certifications</h2>
+            <div class="container container--narrow">
+                <header class="section-head">
+                    <p data-i18n="edu.eyebrow" class="eyebrow">05 · Education</p>
+                    <h2 data-i18n="edu.title" class="section-title">Education &amp; certifications</h2>
+                </header>
 
                 <div class="edu-grid">
                     <article class="edu-card edu-card--main">
                         <img src="images/ec-images/ifmt.png" alt="" width="48" height="48">
                         <div>
-                            <span class="edu-kicker">Degree · Sep 2021 – Jun 2025</span>
-                            <h3>Technology in Systems for the Internet</h3>
-                            <p>Federal Institute of Education, Science and Technology of Mato Grosso (IFMT)</p>
-                            <p class="edu-note">
+                            <span data-i18n="edu.degree.kicker" class="edu-kicker">Degree · Sep 2021 – Jun 2025</span>
+                            <h3 data-i18n="edu.degree.title">Technology in Systems for the Internet</h3>
+                            <p data-i18n="edu.degree.school">Federal Institute of Education, Science and Technology of Mato Grosso (IFMT)</p>
+                            <p data-i18n="edu.degree.note" class="edu-note">
                                 An undergraduate technology degree in web development, covering front-end,
                                 back-end, databases and software engineering.
                             </p>
@@ -735,12 +756,12 @@
                     <article class="edu-card">
                         <div class="edu-icon" aria-hidden="true"><i class="fa-solid fa-certificate"></i></div>
                         <div>
-                            <span class="edu-kicker">EF SET · Issued Mar 2024</span>
-                            <h3>EF SET English Certificate</h3>
+                            <span data-i18n="edu.efset.kicker" class="edu-kicker">EF SET · Issued Mar 2024</span>
+                            <h3 data-i18n="edu.efset.title">EF SET English Certificate</h3>
                             <p class="score">
-                                <strong>72</strong>/100 · <span class="badge">C2 Proficient</span>
+                                <strong>72</strong>/100 · <span data-i18n="edu.efset.level" class="badge">C2 Proficient</span>
                             </p>
-                            <a class="edu-link" href="https://cert.efset.org/LYNcvv" target="_blank" rel="noopener">
+                            <a data-i18n="edu.efset.link" class="edu-link" href="https://cert.efset.org/LYNcvv" target="_blank" rel="noopener">
                                 Show credential <i class="fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
                         </div>
@@ -749,7 +770,7 @@
                     <article class="edu-card">
                         <div class="edu-icon" aria-hidden="true"><i class="fa-brands fa-python"></i></div>
                         <div>
-                            <span class="edu-kicker">Cisco Networking Academy · Issued Oct 2022</span>
+                            <span data-i18n="edu.pcap.kicker" class="edu-kicker">Cisco Networking Academy · Issued Oct 2022</span>
                             <h3>PCAP: Programming Essentials in Python</h3>
                             <ul class="tags tags-sm"><li>Python</li></ul>
                         </div>
@@ -761,8 +782,11 @@
         <!-- ================================ CONTACT ================================ -->
         <section id="contact" class="section contact">
             <div class="container">
-                <h2 class="section-title"><span class="accent">06.</span> Get in touch</h2>
-                <p class="contact-text">
+                <header class="section-head">
+                    <p data-i18n="contact.eyebrow" class="eyebrow">06 · Contact</p>
+                    <h2 data-i18n="contact.title" class="section-title">Let's work together</h2>
+                </header>
+                <p data-i18n="contact.text" class="contact-text">
                     I'm open to new opportunities and collaborations. The best way to reach me is on LinkedIn.
                 </p>
                 <div class="hero-actions">
@@ -793,6 +817,7 @@
         </div>
     </footer>
 
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

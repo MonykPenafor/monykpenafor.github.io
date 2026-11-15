@@ -38,7 +38,7 @@ A single responsive page built with **plain HTML, CSS and JavaScript**: no frame
 Hosted on **GitHub Pages**.
 
 - Responsive layout (desktop, tablet and phone) with a mobile menu
-- Light and dark theme, remembered between visits
+- English / Portuguese switch and light / dark theme, both remembered between visits
 - Job durations calculated automatically from start and end dates
 - Project filters by category
 - The menu highlights the section being read
@@ -52,7 +52,9 @@ Hosted on **GitHub Pages**.
 ├── index.html          # Page content (all sections)
 ├── assets/
 │   ├── css/main.css    # Styles and color palette (CSS variables)
-│   └── js/main.js      # Theme, menu, durations, filters and scroll effects
+│   └── js/
+│       ├── main.js     # Language, theme, menu, durations, filters and scroll effects
+│       └── i18n.js     # Portuguese translations (English lives in index.html)
 └── images/             # Project screenshots, logos and favicons
 ```
 

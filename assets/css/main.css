@@ -29,7 +29,9 @@
     --font-head: 'Space Grotesk', 'Inter', system-ui, sans-serif;
 }
 
-[data-theme="dark"] {
+[data-theme="dark"],
+.hero,
+.site-header {
     --bg: var(--gunmetal);
     --bg-alt: #1C2027;
     --surface: #2B313B;
@@ -121,6 +123,7 @@ abbr {
    HEADER / NAV
    ========================================================================= */
 .site-header {
+    color: var(--text);
     position: fixed;
     inset: 0 0 auto 0;
     height: var(--header-h);
@@ -193,6 +196,42 @@ abbr {
     display: none;
 }
 
+/* EN / PT switch */
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    height: 38px;
+    padding: 3px;
+    margin-left: 8px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: none;
+    color: var(--text-muted);
+    font: 600 .78rem/1 var(--font-head);
+    letter-spacing: .04em;
+    cursor: pointer;
+}
+
+.lang-toggle span {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    padding: 0 8px;
+    border-radius: 5px;
+    transition: background .2s, color .2s;
+}
+
+.lang-toggle:not([data-current="pt"]) [data-lang="en"],
+.lang-toggle[data-current="pt"] [data-lang="pt"] {
+    background: var(--accent);
+    color: var(--gunmetal);
+}
+
+.lang-toggle:hover {
+    color: var(--text);
+}
+
 @media (max-width: 900px) {
     .nav-toggle {
         display: block;
@@ -215,7 +254,8 @@ abbr {
         display: flex;
     }
 
-    .theme-toggle {
+    .theme-toggle,
+    .lang-toggle {
         margin: 8px 0 0 14px;
     }
 }
@@ -244,7 +284,8 @@ abbr {
     color: #fff;
 }
 
-[data-theme="dark"] .btn-primary {
+[data-theme="dark"] .btn-primary,
+.hero .btn-primary {
     color: var(--gunmetal);
 }
 
@@ -440,7 +481,18 @@ abbr {
    SECTIONS
    ========================================================================= */
 .section {
-    padding-block: 96px;
+    padding-block: 120px;
+}
+
+@media (max-width: 700px) {
+    .section {
+        padding-block: 80px;
+    }
+}
+
+/* Narrower, centered column for reading-heavy sections */
+.container--narrow {
+    max-width: 920px;
 }
 
 .section:nth-of-type(even) {
@@ -458,6 +510,8 @@ abbr {
 
 .about-text p {
     margin-top: 0;
+    margin-bottom: 1.2em;
+    line-height: 1.75;
     color: var(--text-muted);
     font-size: 1.05rem;
 }
@@ -502,7 +556,7 @@ abbr {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 16px;
 }
 
@@ -553,7 +607,6 @@ abbr {
 .xp-list {
     display: grid;
     gap: 24px;
-    max-width: 860px;
 }
 
 .xp-company,
@@ -831,6 +884,106 @@ abbr {
 
 .project-card[hidden] {
     display: none;
+}
+
+/* Featured project: full-width, image left / text right */
+.project-card.project-card--featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+}
+
+.project-card--featured .project-thumb {
+    aspect-ratio: auto;
+    min-height: 320px;
+}
+
+.project-card--featured .project-body {
+    padding: 32px;
+    justify-content: center;
+}
+
+.project-card--featured h3 {
+    font-size: 1.5rem;
+}
+
+.project-card--featured .project-body p {
+    font-size: 1rem;
+}
+
+/* Flashcard mock-up used as the featured project's image */
+.project-thumb.project-thumb--flashcards {
+    position: relative;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background:
+        radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--mikado) 30%, transparent), transparent 55%),
+        radial-gradient(circle at 85% 85%, color-mix(in srgb, var(--accent-2) 35%, transparent), transparent 55%),
+        var(--gunmetal);
+}
+
+.fc {
+    grid-area: 1 / 1;
+    width: 190px;
+    height: 124px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 12px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .35);
+    transition: transform .4s;
+}
+
+.fc strong {
+    font-size: 2.4rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.fc small {
+    font-size: .8rem;
+    letter-spacing: .04em;
+}
+
+.fc-back {
+    background: var(--tiffany);
+    color: var(--gunmetal);
+    transform: translate(54px, -22px) rotate(8deg);
+}
+
+.fc-front {
+    background: var(--ivory);
+    color: var(--raisin);
+    transform: translate(-34px, 18px) rotate(-6deg);
+}
+
+.fc-front small {
+    color: #8a8f88;
+}
+
+.project-card--featured:hover .fc-back {
+    transform: translate(66px, -30px) rotate(12deg);
+}
+
+.project-card--featured:hover .fc-front {
+    transform: translate(-42px, 24px) rotate(-9deg);
+}
+
+@media (max-width: 800px) {
+    .project-card.project-card--featured {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card--featured .project-thumb {
+        min-height: 230px;
+    }
+
+    .project-card--featured .project-body {
+        padding: 22px;
+    }
 }
 
 /* EDUCATION & CERTIFICATIONS */
@@ -1167,6 +1320,8 @@ abbr {
     position: relative;
     overflow: hidden;
     isolation: isolate;
+    background: var(--bg);
+    color: var(--text);
 }
 
 /* Blurred street lights, like a city out of focus */
@@ -1184,10 +1339,6 @@ abbr {
         radial-gradient(circle at 78% 78%, rgba(128, 207, 184, .16) 0, transparent 12%),
         radial-gradient(circle at 60% 92%, rgba(255, 198, 25, .12) 0, transparent 10%);
     filter: blur(6px);
-}
-
-[data-theme="light"] .hero::before {
-    opacity: .55;
 }
 
 /* Lane marking at the bottom of the hero */
@@ -1257,29 +1408,35 @@ abbr {
     }
 }
 
-/* ---------- Section titles ---------- */
+/* ---------- Section headings: small eyebrow label + heading ---------- */
+.section-head {
+    margin-bottom: 44px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    font-family: var(--font-head);
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent-2);
+}
+
 .section-title {
-    font-size: clamp(1.6rem, 4vw, 2.2rem);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 40px;
+    margin: 0;
+    font-size: clamp(1.8rem, 4.2vw, 2.6rem);
+    letter-spacing: -.01em;
 }
 
-.section-title::after {
-    content: "";
-    flex: 1;
-    max-width: 280px;
-    height: 1px;
-    background: var(--border);
+.section-intro {
+    margin: 12px 0 0;
+    max-width: 60ch;
+    color: var(--text-muted);
 }
 
-.section-title .accent {
-    font-size: .7em;
-}
-
-.contact .section-title::after {
-    display: none;
+.contact .section-intro {
+    margin-inline: auto;
 }
 
 /* ---------- Reading progress as a lane marking ---------- */
